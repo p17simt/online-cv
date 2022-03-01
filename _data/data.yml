@@ -37,19 +37,23 @@ sidebar:
 career-profile:
     title: Career Profile
     summary: |
-      I am studying computer science at Ionio University since 2017.
+      I am studying computer science at Ionio University since 2017. When i'll graduate, i'd like to be involved with Web design in combination with the digital marketing.
 education:
     - degree: Computer Science
       university: Ionio University
       time: 2017 - Present      
 experiences:
-    - role: Website Creator and Desinger
+    - role: Website Creator and Desinger,
       time: 2019 - Present
       details: |
         I can build and desing websites by using Wordpress.
-
+- role: Database creation,
+      time: 2020 - Present
+      details: |
+        I can manage databases, using MySQL
 skills:
-    title: Skills &amp; Proficiency
+    title: Skills &amp; Proficiency Degree on English, B1 Degree grom Goethe Institut on German
+
 
     toolset:
       - name: Python & Django
