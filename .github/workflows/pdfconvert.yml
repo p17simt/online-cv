@@ -1,0 +1,30 @@
+name: pandoc
+
+on: 
+  page_build:
+    branches: [gh-pages]
+  
+jobs:
+  convert:
+    runs-on: ubuntu-20.04
+    steps:  
+      - uses: actions/checkout@v2
+        with:
+         persist-credentials: false
+         fetch-depth: 0
+      - name: Convert 
+        uses: docker://pandoc/latex:2.13
+        with:
+          args: "https://p17simt.github.io/online-cv/ -f html-native_divs -o cv.pdf --pdf-engine=xelatex"
+      - name: Commit pdf
+        run: |
+          git config --global user.name 'Pinelopi Simtsi'
+          git config --global user.email 'p17simt@users.noreply.github.com'
+          git add -A
+          git add .
+          git commit -m "Added PDF -auto action"
+      - name: Push changes
+        uses: ad-m/github-push-action@master
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          branch: ${{ github.ref }}
