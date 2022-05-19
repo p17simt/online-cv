@@ -2,7 +2,7 @@ name: pandoc
 
 on: 
   page_build:
-    branches: [gh-pages]
+    branches: [master]
   
 jobs:
   convert:
